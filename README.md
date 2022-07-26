@@ -22,10 +22,14 @@ This is a solution to the [Huddle landing page with single introductory section 
 
 ## My process
 
-- I wrote the html first to structure the webpage and then used flexbox and classes in css to style the page.
+- I wrote the html first to structure the webpage.
+- I used CSS Grid to create the desktop layout.
+- I used Flexbox to create a flexible layout inside the CSS Grid columns and rows.
+- I modified CSS Grid to achieve the desired responsive layout.
 
 ### Built with
 
 - HTML5
-- CSS
+- CSS Custom Properties
+- CSS Grid
 - Flexbox
