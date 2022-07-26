@@ -1,0 +1,178 @@
+:root {
+    --primary-v: hsl(257, 40%, 49%);
+    --primary-sm: hsl(300, 69%, 71%);
+    
+    
+    --ff-pop: 'Poppins', sans-serif;
+
+    --ff-os: 'Open Sans', sans-serif;
+
+    --fw-400: 400;
+    --fw-600: 600
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr;
+    grid-template-areas:
+    'log log log log'
+    'moc moc con con';
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--primary-v);
+}
+
+.logo {
+    display: grid;
+    grid-area: log;
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.logo img {
+    transform: scale(0.7);
+}
+
+.mockup {
+    display: grid;
+    grid-area: moc;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    padding: 1rem;
+    margin-left: 1rem;
+}
+
+
+.content {
+    display: grid;
+    grid-area: con;
+    /* grid-column-start: 3;
+    grid-column-end: 5; */
+    padding: 4rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content h1 {
+    font-family: var(--ff-pop);
+    font-weight: var(--fw-600);
+    color: white;
+    font-size: 2.2rem;
+}
+
+.content p {
+    font-family: var(--ff-os);
+    font-weight: var(--fw-400);
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    width: 35%;
+    color: var(--primary-v);
+    background-color: white;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--ff-os);
+    font-weight: var(--fw-600);
+    font-size: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem hsl(257, 54%, 42%);
+}
+
+
+.social {
+    margin-top: 4rem;
+    margin-left: 8rem;
+    text-align: center;
+}
+
+.social i {
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    color: white;
+    border: 1px solid white;
+    background-color: var(--primary-v);
+    padding: 0.7rem;
+    border-radius: 50%;
+}
+
+i + i {
+    margin-left: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--primary-sm);
+    cursor: pointer;
+    color: white;
+}
+
+.social i:hover {
+    border: 1px solid hsl(300, 69%, 71%);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 63em) {
+    body {
+        display: grid;
+        background-image: url(./images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        'log'
+        'moc'
+        'moc'
+        'con'
+        'con'
+        'con';
+    }
+
+    .wrapper {
+        gap: 2rem;
+    }
+
+    .btn {
+        min-width: 50%;
+        align-self: center;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .social {
+        margin: 1rem auto;
+    }
+}
